@@ -1,0 +1,6 @@
+var initializeJs = function{
+	screenDpi: function() {
+
+	}
+
+} 
