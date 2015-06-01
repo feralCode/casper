@@ -71,6 +71,17 @@ window.CasperPlayer = function(elementId) {
       },450,'snap');
 
       _hidden = false;
+      
+    $('#'+_domId).on('touchstart', function(e){
+        //touchsurface.innerHTML = ''
+        var touchobj = e.changedTouches[0]
+        dist = 0
+        startX = touchobj.pageX
+        startY = touchobj.pageY
+        startTime = new Date().getTime() // record time when finger first makes contact with surface
+        e.preventDefault()
+    }, false)
+
   }, 1000, true);
   //////////////////////////////////////////////////////////////////////////////
   /// clear/destroy player
